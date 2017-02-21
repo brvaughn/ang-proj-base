@@ -1,0 +1,55 @@
+{
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:createdBy": "admin",
+    "jcr:title": "Advanced Components (Rendered in APP)",
+    "cq:template": "/apps/rapid-projects/advcms/templates/page/generic",
+    "aesr.project.url": "/advanced/components/apprendering/",
+    "jcr:created": "Thu Nov 03 2016 10:51:35 GMT-0400",
+    "cq:lastModified": "Tue Feb 14 2017 15:17:27 GMT-0500",
+    "sling:resourceType": "rapid-projects/advcms/components/page/generic",
+    "cq:lastModifiedBy": "admin",
+    "first-card": {
+        "jcr:primaryType": "nt:unstructured",
+        "description": "<p>Description<\/p>\n",
+        "jcr:lastModifiedBy": "admin",
+        "title": "Elepahant",
+        "jcr:lastModified": "Tue Jan 24 2017 15:52:32 GMT-0500",
+        "sling:resourceType": "rapid-projects/advcms/components/common/animalcard-app",
+        "image": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:lastModifiedBy": "admin",
+            "filePath": "/content/rapid/advcms/advanced/components/apprendering/jcr:content/first-card/image/file",
+            "jcr:lastModified": "Tue Jan 24 2017 15:52:32 GMT-0500",
+            "sling:resourceType": "foundation/components/image",
+            "imageRotate": "0",
+            "file": {
+                "jcr:primaryType": "nt:file",
+                "jcr:createdBy": "admin",
+                "jcr:created": "Tue Jan 24 2017 15:52:23 GMT-0500",
+                "jcr:content": {
+                    "jcr:primaryType": "nt:resource",
+                    "jcr:lastModifiedBy": "admin",
+                    "jcr:mimeType": "image/png",
+                    "jcr:lastModified": "Tue Jan 24 2017 15:52:23 GMT-0500",
+                    ":jcr:data": 56081,
+                    "jcr:uuid": "82678b02-1e2b-4b87-92cd-1fc124e7332f"
+                }
+            }
+        }
+    },
+    "second-card": {
+        "jcr:primaryType": "nt:unstructured",
+        "description": "<p>Desc<\/p>\n",
+        "jcr:lastModifiedBy": "admin",
+        "title": "title",
+        "jcr:lastModified": "Tue Feb 14 2017 15:17:26 GMT-0500",
+        "sling:resourceType": "rapid-projects/advcms/components/common/animalcard-app",
+        "image": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:lastModified": "Tue Feb 14 2017 15:17:26 GMT-0500",
+            "sling:resourceType": "foundation/components/image",
+            "imageRotate": "0"
+        }
+    }
+}
