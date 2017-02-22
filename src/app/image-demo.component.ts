@@ -30,6 +30,7 @@ export class ImageDemoComponent implements OnInit {
     loadImages(): void {
         console.log('I am in loadImages');
         this.images = this.requestService.getImagesContent();
+        console.log(this.images);
         this.propone = typeof this.images;
         this.proptwo = Object.getOwnPropertyNames(this.images);
                 //  this.requestService.getImagesContent()

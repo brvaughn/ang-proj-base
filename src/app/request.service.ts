@@ -6,45 +6,35 @@ import 'rxjs/add/operator/map';
 
 import 'rxjs/add/operator/toPromise';
 
-import { Image } from './image';
+// import { Image } from './image';
 
 @Injectable()
 export class RequestService {
 
-    private urlBase = 'http://localhost:8080/';
+    private urlBase = 'http://localhost:1337/';
+    // private urlBase = 'http://en.wikipedia.org/w/api.php';
     private baseContentUrl = this.urlBase + 'app/json/frontpage.json';
     private contentUrl = this.urlBase + 'app/json/base.json';
-    private imagesContentUrl = this.urlBase + 'content/images';
+    private imagesContentUrl = this.urlBase + 'content/imagesjson';
 
     constructor(private http: Http, private jsonp: Jsonp) { }
 
 
-//   getHeroes (): Observable<Hero[]> {
-//     return this.http.get(this.heroesUrl)
-//                     .map(this.extractData)
-//                     .catch(this.handleError);
-//   }
-
-
   getImagesContent(): Observable<JSON> {
-      console.log('The http URL is ' + this.imagesContentUrl);
-      console.log(typeof this.imagesContentUrl);
-    //   console.log(this.http.get(this.imagesContentUrl));
-      return this.http.get(this.imagesContentUrl)
-                    .map(this.extractData)
-                    .catch(this.handleError);
+      // return this.http.get(this.imagesContentUrl)
+      //               .map(this.extractData)
+      //               .catch(this.handleError);
+    let params = new URLSearchParams();
+    // params.set('search', term); // the user's search value
+    // params.set('action', 'opensearch');
+    // params.set('format', 'json');
+    params.set('callback', 'callback');
+    console.log('The http URL is ' + this.imagesContentUrl + params);
+    console.log(typeof this.imagesContentUrl);
+
+    return this.jsonp.get(this.imagesContentUrl, { search: params })
+          .map(response => <JSON> response.json());
   }
-
-    //  getComments() : Observable<Comment[]> {
-
-    //      // ...using get request
-    //      return this.http.get(this.commentsUrl)
-    //                     // ...and calling .json() on the response to return data
-    //                      .map((res:Response) => res.json())
-    //                      //...errors if any
-    //                      .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
-
-    //  }
 
   private extractData(res: Response) {
     let body = res.json();

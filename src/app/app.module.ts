@@ -27,7 +27,7 @@ import { WikipediaService } from './wikipedia.service';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService),
+    // InMemoryWebApiModule.forRoot(InMemoryDataService),
     HttpModule,
     JsonpModule
   ],
